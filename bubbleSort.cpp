@@ -1,21 +1,13 @@
 /*BUBBLE SORTING
-Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements
+ Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements
  if they are in the wrong order. This algorithm is not suitable for large data sets
  as its average and worst case time complexity is quite high.
 
- definition in simple terms-har i(th)round main i(th) lArgest element ko uske right place pr paucha dete hai..
-
- important points
- 1.condition for i=size-1 and j=size-i-1
-
-
+ definition in simple terms-in every i(th)round ,the i(th) largest element will get placed to its right position..
 
  #time complexity-O(n^2)
  #space complexity-O(1)
-
-
-
- */
+*/
 
 // C++ program for implementation of Bubble sort
 
@@ -26,14 +18,14 @@ using namespace std;
 void bubbleSort(int arr[], int n)
 {
     int i, j;
-    for (i = 0; i < n - 1; i++) // round ko bta raha hai ki konsa round ka pass hai ...
+    for (i = 0; i < n - 1; i++)
 
     // n-1 Last i elements are already in place
     //
     {
-        for (j = 0; j < n - i - 1; j++) // har round ke liye sare adjacent elements ko compare kr
+        for (j = 0; j < n - i - 1; j++) 
         {
-            if (arr[j] > arr[j + 1]) // n-i-1 qki har rounf ke bad end mai maximum element a jayega
+            if (arr[j] > arr[j + 1]) 
             {
                 swap(arr[j], arr[j + 1]);
             }
@@ -56,7 +48,7 @@ void bubbleSort(int arr[], int n)
         int arr[] = {5, 1, 4, 2, 8};
         int N = sizeof(arr) / sizeof(arr[0]);
         printArray(arr, N);
-        // for getting size of the array(eg if array 5*4=20/4=5(N))
+        
         bubbleSort(arr, N);
         cout << "Sorted array: \n";
         printArray(arr, N);
